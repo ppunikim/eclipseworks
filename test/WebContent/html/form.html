@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>입력 양식 실습</title>
+<style>
+table { border-collapse: collapse; width: 100%; }
+th,td{ border:2px solid black; width:50% }
+textarea {width:300px; height:50px; resize:none;}
+
+</style>
+
+
+<body>
+
+<h2>입력양식 실습</h2>
+<p>form 태그 : 사용자의 입력을 받는 화면을 구성할 때 사용하는 태그로 입력한 데이터를
+다른 페이지로 보낼 수 있는 태그.
+<br>예) 로그인 할 때 아이디와 비밀번호를 입력하여 보내는 경우
+<br>예) 회원가입 할 때 가입에 필요한 여러 회원정보를 입력하여 보내는(전송할 수 transfer) 경우 등..
+</p>
+
+<h2>입력(input)태그</h2>
+<p>
+<table>
+   <tr><th>text</th><td>한 줄 택스트를 입력하는 태그</td></tr>
+   <tr><th>submit</th><td>폼 태그내의 입력데이터를 전송하는 버튼 태그</td></tr>
+   <tr><th>password</th><td>입력 텍스트가 보이지 않는 비밀번호 태그</td></tr>
+   <tr><th>hidden</th><td>실제 소스가 존재하지만 화면에서는 보이지 않는 히든 태그</td></tr>
+   <tr><th>radio</th><td>여러항목 중 한개만 선택할 때 사용하는 태그</td></tr>
+   <tr><th>checkbox</th><td>여러 항목을 모두 선택할 수 있는 태그</td></tr>
+   <tr><th>file</th><td>첨부할 파일을 선택하는 태그</td></tr>
+   
+   
+</table>
+<hr>
+
+<p> form 태그를 통해 입력 데이터를 내보낼 때(전송) 반드시 name속성이 있어야 한다.</p>
+<p> form 태그의 action 속성값이 없거나 action을 지정하지 않으면 자기자신페이지를 연다.</p>
+<p> 입력태그 자동완성기능 : autocomplete로 기본은 on상태이므로, 자동완성기능을 사용
+하지 않으려면 off로 바꿔줘야한다.
+<br>autocomplete='off'</p>
+<p>  전송되는 입력값들을 파라미터라고 한다. <br>전송하는 데이터가 여러개인 경우 각
+파라미터는 & 로 구분되어 있다.
+<br>파라미터가 노출이 되는 형태, 노출되지않는
+형태가 있는데 노출되는 형태는 method:get 방식, 노출되지않는형태 method:post 방식</p>
+<p>placeholder: 텍스트 입력태그에 무엇을 입력하는 태그인지 보여지게 하는 속성</p>
+<p>required : 반드시 입력해야만 하는 필수입력항목을 입력하지 않으면 submit되지 않도록 처리하려면
+프로그래밍적으로 해결할 수도 있지만 태그 자체의 required 속성을 이용할 수도 있다.</p>
+<p> readonly : 입력태그이지만 변경 불가능하게 처리하고자 할 때 지정하는 속성(데이터 전송 된다.)
+<br>disabled : readonly와 같은 내용이지만 차이점으로는 submit시 데이터 전송이 안된다.</p>
+<p>파일을 첨부하여 전송하는 경우는 form에 반드시 지정해야 할 속성 2가지<br>
+1. method를 post로 지정해야만 한다.<br>
+2. enctype을 multipart/form-data 를 지정해야만 한다.
+</p>
+
+
+
+
+
+<form action='ex02.html' method='post' enctype='multipart/form-data'>
+ <div>* 성명: <input type='text' name='name' autocomplete='off' required placeholder='성명'></div>
+ <div>전화번호: <input type='text' name='phone' placeholder='전화번호' 
+ disabled value='01034546677'></div>
+ <div>입력란: <input type='text' name='text'
+ readonly value='여기에 입력하라'></div>
+ <div>* 비밀번호: <input type='password' name='비밀번호' placeholder='비밀번호' required></div>
+ <div><input type='hidden' name='id'></div>
+ <div>과목 선택
+    <input type='checkbox' name='subject' value='영어' id='e'><label for='e'>영어</label>
+    <input type='radio' name='subject' value='국어' checked id='k'><label for='k'>국어</label>
+    <input type='radio' name='subject' value='수학' id='m'><label for='m'>수학</label>
+ </div>
+ 
+ <div> 성별: 
+    <input type='radio' name='gender' value='남' id='male'><label for='male'>남</label>
+    <input type='radio' name='gender' value='여' id='f'><label for='f'>여</label>
+ </div>
+ <div>다중선택 태그 - 구기종목: 
+ <input type='checkbox' name='농구'>농구
+ <input type='checkbox'name='야구'>야구
+ <input type='checkbox'name='sports'>축구
+ <input type='checkbox'name='sports'>배구
+ <input type='checkbox'name='sports'>탁구
+ </div>
+ <div>파일선택 : <input type='file' name='file name'></div><br>
+ <div> <input type='submit' value='회원가입'></div>
+ <hr>
+ <div>여러줄 입력 태그 : <textarea name='meno'></textarea>
+ </div>
+<hr>
+<div> 반려가족:
+<select name='companion'>
+  <option value='a01'>강아지</option>
+  <option value='a02'>고양이</option>
+  <option value='a03'>뱀</option>
+  <option value='a04'>햄스터</option>
+  <option value='a05'>식물</option>
+</select>
+</div> 
+ 
+ 
+</form>
+
+<hr>
+<h3>textarea태그</h3>
+<p>여러줄을 입력하는데 사용하는 입력 텍스트 태그</p>
+
+<h3>select태그</h3>
+<p>여러개의 목록에서 선택하는 드랍다운 목록태그</p>
+
+
+
+
+
+
+</body>
+</html>

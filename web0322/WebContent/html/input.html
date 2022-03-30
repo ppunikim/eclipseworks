@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<!-- value는 기본값으로 보여지는 값이다. -->
+<title>추가 input 실습</title>
+
+<link rel='stylesheet' href="../css/common.css">
+
+
+</head>
+
+<body>
+<a href='../t0322.html'>홈으로</a>
+
+<input type='button' value="닫기" onclick='window.close()' ><br>
+
+<h3>추가적인 input 스타일</h3>
+<table>
+<tr><th>number 태그</th><td>숫자만 입력할 수 있는 태그</td></tr>
+<tr><th>data 태그</th><td>날짜를 선택할 수 있는 달력 태그</td></tr>
+<tr><th>month 태그</th><td>월을 선택할 수 있는 달력 태그</td></tr>
+<tr><th>time 태그</th><td>시간을 선택할 수 있는 시계 태그</td></tr>
+<tr><th>button 태그</th><td>아무런 기능이 없는 버튼 태그</td></tr>
+<tr><th> 태그</th><td></td></tr>
+<tr><th> 태그</th><td></td></tr>
+</table>
+<hr>
+
+
+
+
+
+<input type='time' value="18:00" ><br>
+<input type='date' ><br>
+<input type='month' ><br>
+<input type='number' min="0" max="10" value='1' step='2'>
+<p>
+<input type='button' value='기능없는 버튼' onclick='alert("알림이다")'><br>
+<!-- 명명() : 함수
+명명된 함수를 호출한다.
+ -->
+</p>
+<hr>
+<p>
+<input type='button' value='새창으로 네이버 열기' 
+onclick='window.open("http://naver.com","new_window")'><br>
+</p>
+<p>
+<input type='button' value='새창으로 구글 열기' 
+onclick='window.open("http://google.com","new_window")'><br>
+</p>
+<hr>
+<p>
+<input type='button' value='회원가입화면 열기' 
+onclick='window.open("./study.html", "install")'><br>
+</p>
+<p>
+<input type='button' value='팝업창 띄우기'
+onclick='window.open("./join.html", "google", "width=500px, height=400px")'>
+
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>선택자</title>
+<link rel='stylesheet' href="./css/common.css">
+<style>
+/*스타일 적용 우선순위 : * < 태그명 < class < id 
+  스타일 별 우선순위 : 외부 스타일 < 내부스타일 < 인라인스타일
+*/
+* {font-size:15px} /*우선순위가 가장 낮다*/
+table {width:800px; border:3px solid;}
+th, td{border : 1px solid; border-collapse:collapse;}
+#text {color: skyblue;}
+.eng {font-weight: bold; color:blue; font-size:25px;}
+body > span { text-decoration: underline; }
+body span {text-decoration: overline;}
+
+</style>
+</head>
+<body>
+<a href ='http://localhost:8080/web0323/w0323.html'>홈으로</a>
+<h2>선택자 알아보기</h2>
+<table>
+ <colgroup><col width=200px><col width='200px'><col></colgroup>
+
+ <thead>
+  <tr><th>구분</th><th>표현</th><th>설명</th></tr>
+ </thead>
+
+ <tbody>
+  <tr><th>전체 선택자</th><td> * </td><td>모든 태그에 적용</td></tr>
+  <tr><th>태그 선택자</th><td>태그명</td><td>해당 태그에 적용</td></tr>
+  <tr><th>아이디 선택자</th><td> #아이디명 </td><td>해당 <span class='eng'>id</span>가 지정된 태그에 적용</td></tr>
+  <tr><th>클래스 선택자</th><td> .클래스명 </td><td>해당 <span class='eng'>class</span>가 지정된 태그에 적용
+  <tr><th>자식 선택자</th><td> 선택자(tag,id,class 등..)> 자식선택자 </td><td> 선택자의 바로 아래 위치한 자식 선택자에만 적용</td></tr>
+  <tr><th>자손 선택자</th><td> 선택자(tag,id,class 등..)한칸 띄어쓰기 자손선택자 </td><td> 선택자 바로 아래 위치한 모든 자손 선택자에 적용 가능</td></tr>
+  <tr><th>속성 선택자</th><td> 특정선택자[속성=값] </td><td>속성이 특정 값을 갖는  선택자에 적용</td></tr>
+  <tr><th> 선택자</th><td>  </td><td>  </td></tr>
+ </tbody>
+
+ <tfoot></tfoot>
+
+</table>
+<br>
+<span id='text'>텍스트 크기 확인</span>
+<p>html 모든 태그에 대해 동일한 스타일 적용하기</p>
+
+<hr>
+<a href =' ./w0323.html'>홈으로</a>
+</body>
+</html>

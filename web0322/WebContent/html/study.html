@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>입력양식 실습</title>
+<style>
+table{ border-collapse: collapse; }
+/* input{width:100px;} */
+/* td{text-align:center; } */
+th,td{padding:5px; border:1px solid #222;}
+a{text-decoration:none;}
+</style>
+
+
+</head>
+<body>
+<a href='../../web0322/t0322.html'>이전 화면으로 가기</a>
+<hr><br>
+<a href='./input.html'>추가 input 실습 페이지</a>
+<h2>지난 수업내용</h2>
+
+<ul><h3>form태그 : 사용자가 입력받는 화면을 구성할 때 사용하는 태그로
+입력한 데이터를 다른페이지에 보낼수 있는 태그</h3>
+
+<li><strong>입력태그:input type="" name=""이 기본구조</strong></li>
+<table border='3px'>
+<tr><th>text</th><td>한줄 택스트 입력</td>
+<tr><th>password</th><td>입력 회로가 보이지 않는 비밀번호 태그</td></tr>
+<tr><th>hidden</th><td>실제 소스가 화면에서는 보이지 않는 히든 태그</td></tr>
+<tr><th>file</th><td>첨부할 파일을 선택하는 태그</td></tr>
+<tr><th>radio</th><td>여러 항목중 한 가지만 선택하는 태그</td></tr>
+<tr><th>checkbox</th><td>여러 항목중 여러개 선택 가능한 태그</td></tr>
+<tr><th>submit</th><td>폼 내 입력데이터를 전송하는 태그</td></tr>
+</table>
+
+
+<br>
+<li><strong>textarea태그: textarea name="" 이 기본 구조</strong>
+여러줄을 입력하는데 사용하는 입력 텍스트 태그</li>
+<br>
+<li><strong>select태그 : select name="" 이 기본 구조</strong>
+여러개의 목록에서 선택하는 드랍다운 목록태그</li>
+
+</ul>
+
+
+
+<form method='get' enctype='multipart/form data'>
+<table border='2px'>
+<colgroup >
+<col width='100px'><col width='200px'>
+</colgroup>
+<caption><strong>회원가입 정보</strong></caption>
+
+<tr><th>아이디</th><td><input type='text' name='id' required 
+placeholder='아이디'></td></tr>
+<tr><th>이름</th><td><input type='text' name='name'></td></tr>
+<tr><th>성별</th><td>
+<input type='radio' name='gender' id='female'><label for='female'>여성</label>
+<input type='radio' name='gender' id='male'><label for='male'>남성</label></td></tr>
+<tr><th>이메일</th><td><input type='text' name='email'>@
+<select name='service'>
+<option value='naver.com'>naver.com</option>
+<option value='nate.com'>nate.com</option>
+<option value='google.com'>google.com</option>
+<option selected>직접입력</option>
+</select>
+</td></tr>
+<tr><th>비밀번호</th><td><input type='password' name='password' required 
+placeholder='비밀번호'></td></tr>
+<tr><th>비밀번호 확인</th><td><input type='password' name='password' required 
+placeholder='재입력'></td></tr>
+<tr><th>전화번호</th><td><select name='cal'>
+<option >010</option>
+<option >011</option>
+<option >02</option>
+<option >062</option>
+<option >051</option>
+</select> - <input type='text' name='call' style='width:40px; height:14px;'>
+ - <input type='text' name='call2' style='width:40px; height:14px;'>
+</td></tr>
+<tr><th>sns 수신 여부</th><td><input type='checkbox' name='sns' id='y'>
+<label for='y'>수신여부</label></td></tr>
+<tr><th>사진 등록</th><td><input type='file' name='file'></td></tr>
+<tr><th colspan='2'><input type='submit' value='회원가입'></th>
+
+</table>
+</form>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<a href='#'>맨 위로 올라가기</a>
+</body>
+</html>

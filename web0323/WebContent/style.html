@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>텍스트 관련 스타일</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Gugi&family=Noto+Sans+KR&display=swap');
+body{
+font-family: 'Do Hyeon', sans-serif;
+font-family: 'Gugi', cursive;
+font-family: 'Noto Sans KR', sans-serif;
+}
+/* @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Gugi&family=Stylish&display=swap'); */
+/* font-family: 'Do Hyeon', sans-serif,'Gugi', cursive,'Stylish'; */
+/* table { border : 1px solid;} */
+
+#shadow{text-shadow: 2px 1px green;  }
+#content{ width: 100px; border:1px solid; white-space:pre-line; overflow:hidden; text-overflow: ellipsis; }
+
+ul{list-style-type: circle; }
+ul#menu{ display:inline-block; width:200px;  }
+
+/* ul의 display 기본값은 block(너비가 100%)으로 지정.
+   display-block; 너비를 지정해서 적용시킬 수 있다.
+   block이 아니면 list-style-type이 적용되지 않아 none이 된다.
+ */
+
+
+th,th{ padding:5px 0; line-height:60px; }
+table td{text-align:left;}
+
+
+
+.bg{ width:300px; height:200px; border:1px solid #222; margin:20px auto}
+#bg1{ background-image:url(http://localhost:8080/web0322/html/image/turn.jpg); 
+      background-size: 300px 200px;  }
+#bg2{ background-image:url(http://localhost:8080/web0322/html/image/turn.jpg); 
+      background-size: 200px 100px; background-repeat: no-repeat; background-position:center;}
+#bg3{ background-image:url(http://localhost:8080/web0322/html/image/cake.jpg);
+      background-size: cover; } 
+
+address { font-style:inherit;  }
+footer { font-size:13px; }
+
+
+
+
+
+</style>
+
+<link rel='stylesheet' href='./css/common.css'>
+
+
+</head>
+<body>
+<a href='./w0323.html'>홈으로</a>
+
+
+<h2>택스트 관련 스타일</h2>
+<h3>글꼴 관련 스타일</h3>
+<p>font(글꼴) = 크기, 굵기, 글꼴형태를 지정할 수 있다.</p>
+<table>
+ <tr><th>font-weight</th>
+ <td>폰트의 굵기 : normal(기본),bold(굵게),border(보다 더 굵게,기준이 있어야 한다.)</td></tr>
+ <tr><th>font-style</th><td>기울기 : normal(기본),italic(기울기)</td></tr>
+ <tr><th>font-size</th><td>폰트의 크기 : 보통 px로 지정한다.</td></tr>
+</table>
+
+<h3>텍스트 스타일</h3>
+<p>글꼴자체가 아닌 글자들(텍스트들)에 대한 스타일을 말한다.</p>
+<ul>
+   <li> text-shadow: 그림자 효과</li>
+   <br>
+   <li> white-space : 공백문자(스페이스바), 탭, 줄바꿈에 대한 처리 
+   <table>
+   <tr><th>nomal</th><td>기본값, 공백이 한개로 합쳐보여짐, 여러줄도 병합되어 한줄로 표시, 자동줄바꿈</td></tr>
+   <tr><th>nowrap</th><td>영역을 벗어나면 보이지 않게 하는 것, 공백은 합쳐져서 한줄로 표시,
+   여러줄도 병합되어 한줄로 합쳐짐.자동 줄바꿈 안됨.</td></tr>
+   <tr><th>pre</th><td>공백 유지됨, 여러줄 유지안됨, 자동줄바꿈 안됨</td></tr>
+   <tr><th>pre-wrap</th><td>공백 유지됨,여러줄 유지됨, 자동줄바꿈 됨</td></tr>
+   <tr><th>pre-line</th><td>공백은 한개로 합쳐져 보임, 여러줄 유지 자동줄바꿈 유지됨</td></tr>
+   <br>
+   </table></li>
+   
+   <p><strong>기타 특징</strong>
+   <br>마우스를 컨텐트에 갖다 올렸을 때 보이게 처리하는 법 : {overflow: visible;}
+   <br>말줄임표로 표시하는 방법 : text-overflow: ellipsis;
+   <br>글씨가 더 많을 때 숨기는 것 : {overflow:hidden;}
+   </p>
+</ul>
+  <p id='shadow'>텍스트에 그림자 효과 주기</p>
+  <p id='content'>중국에   있는 남부
+  광시성 우저우시  야산에  추락한        중국동방항공       여객기는</p>
+
+<h3>목록 스타일</h3>
+<ul>
+<li>주요뉴스</li>
+<li>정치</li>
+<li>사회</li>
+<li>경제</li>
+</ul>
+<ul id='menu'>
+<li>주요뉴스</li>
+<li>정치</li>
+<li>사회</li>
+<li>경제</li>
+</ul>
+
+
+
+
+<br>
+<h3>문단 스타일</h3>
+  <p>텍스트로 된 문단의 정렬, 들여쓰기, 줄간격 등에 대한 스타일</p>
+  <table>
+      <caption>기본 정보</caption>
+      <tr><th>아이디</th><td>thth</td></tr>
+      <tr><th>성명</th><td>뿌니</td></tr>
+      <tr><th>연락처</th><td>062-222-2222</td></tr>
+      <tr><th>특징</th><td>환경문제 해결에 동참하겠다는 강한 의지를 나타낸다고 기아는 설명했다.</td></tr>
+  </table>
+
+<br>
+<h3>색상과 배경 관련 스타일</h3>
+<ul>
+<li>background-image: 배경이미지를 url로 지정한다.</li>
+<li>background-size: 배경이미지의 크기 지정<br>->cover; 배경이미지를 확대&축소해서 요소 전체를 채우는 형태</li>
+<li>background-repeat: 배경이미지의 반복여부</li>
+<li>background-position: 배경이미지의 위치</li>
+</ul>
+
+
+
+<div id='bg1' class='bg' ></div>
+<div id='bg2' class='bg'></div>
+<div id='bg3' class='bg' ></div>
+
+
+
+
+<hr>
+<footer>
+<strong>네이버</strong>
+<address>북구 경양로 170 한경빌딩</address>
+</footer>
+
+
+</body>
+</html>

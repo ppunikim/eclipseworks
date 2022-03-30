@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>회원가입 양식 만들기</title>
+
+<style>
+table{border-collapse:collapse;}
+table th,td{ padding:10px; }
+
+</style>
+
+
+</head>
+<body>
+
+<form method='post' enctype='multipart/form-data'>
+<table border='3px'>
+ <caption><strong>회원 가입 정보</strong></caption>
+  <tr><th>아이디</th><td><div><input type='text' name='id' placeholder='please
+  enter your id'  autocomplete='off' required></div></td></tr>
+  <tr><th>비밀번호</th><td><div><input type='password' name='password' 
+  placeholder='please enter your password' required></div></td></tr>
+  <tr><th>비밀번호 확인</th><td><div><input type='password' name='password' 
+  placeholder='enter your password again' required></div></td></tr>
+  <tr><th>이름</th><td><div><input type='text' name='name' placeholder='please
+  enter your id' required></div></td></tr>
+  <tr><th>성별</th><td><input type='radio' name='name' value='gender'
+  id='female' checked  ><label for='female'>여</lable>
+  <input type='radio' name='name' value='gender'
+  id='male'><label for='male'>남</lable></td></tr>
+  <tr><th>전화번호</th><td><select name='phone'>
+  <option>02</option><option>051</option><option>062</option>
+  <option>010</option></select>
+  
+  <input style='width:50px' autocomplete='off'><input style='width:50px'autocomplete='off'></td></tr>
+  <tr><th>sns수신여부</th><td></td></tr>
+  <tr><th>이메일</th><td></td></tr>
+  <tr><th>사진등록</th><td></td></tr>
+  <tr><td colspan='2'></td></tr>
+
+</table>
+</form>
+
+
+
+
+
+</body>
+</html>

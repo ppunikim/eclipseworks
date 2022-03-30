@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>입력양식 실습</title>
+<style>
+table{border-width:2px; border-style:solid;}
+/* input{width:100px;} */
+/* td{text-align:center; } */
+th,td{padding:5px; border:1px solid #222;}
+a{text-decoration:none;}
+</style>
+
+
+</head>
+<body>
+
+<a href ='http://localhost:8080/web0323/w0323.html'>홈으로</a>
+<input type='button' value="닫기" onclick='self.close()' ><br>
+<form method='get' enctype='multipart/form data'>
+<table>
+<!--  border='2px' -->
+<colgroup >
+<col width='100px'><col width='200px'>
+</colgroup>
+<caption><strong>회원가입 정보</strong></caption>
+
+<tr><th>아이디</th><td><input type='text' name='id' required 
+placeholder='아이디'></td></tr>
+<tr><th>이름</th><td><input type='text' name='name'></td></tr>
+<tr><th>성별</th><td>
+<input type='radio' name='gender' id='female'><label for='female'>여성</label>
+<input type='radio' name='gender' id='male'><label for='male'>남성</label></td></tr>
+<tr><th>이메일</th><td><input type='text' name='email'>@
+<select name='service'>
+<option value='naver.com'>naver.com</option>
+<option value='nate.com'>nate.com</option>
+<option value='google.com'>google.com</option>
+<option selected>직접입력</option>
+</select>
+</td></tr>
+<tr><th>비밀번호</th><td><input type='password' name='password' required 
+placeholder='비밀번호'></td></tr>
+<tr><th>비밀번호 확인</th><td><input type='password' name='password' required 
+placeholder='재입력'></td></tr>
+<tr><th>전화번호</th><td><select name='cal'>
+<option >010</option>
+<option >011</option>
+<option >02</option>
+<option >062</option>
+<option >051</option>
+</select> - <input type='text' name='call' style='width:40px; height:14px;'>
+ - <input type='text' name='call2' style='width:40px; height:14px;'>
+</td></tr>
+<tr><th>sns 수신 여부</th><td><input type='checkbox' name='sns' id='y'>
+<label for='y'>수신여부</label></td></tr>
+<tr><th>사진 등록</th><td><input type='file' name='file'></td></tr>
+<tr><th colspan='2'><input type='submit' value='회원가입'></th>
+
+</table>
+</form>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<a href='#'>맨 위로 올라가기</a>
+</body>
+</html>

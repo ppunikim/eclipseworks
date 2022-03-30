@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이미지 태그 실습</title>
+
+<style>
+a { 
+   text-decoration: none;
+   color: initial;
+}
+
+a {
+   cursor: pointer;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<ui>
+<li>
+<a target= '_blank' href='../t0317.html'>식단표</a></li>
+<br>
+<li>
+<a target= '_blank' href='../test.html'>03.17 수업 내용</a></li>
+<br>
+<li><a target= '_blank' onclick='alert("메뉴 클릭")'>메뉴 alert창 띄우기</a>
+</li>
+</ui>
+
+
+<hr>
+<h2><a href = '#no1'>링크</a></h2>
+<ul>
+<li> a태그 : 링크는 현재 웹 페이지에서 다른 페이지로 연결하기 위한 형태
+<br> ->  target='_blank'  이것은 따로 창이 또 뜨도록 만드는 것(창2개)
+<br> ->  target='_self'  이것은 내가 지금 있는 창으로 창을 여는 것/
+         굳이 지정 안해도 된다.(창1개)
+</li>
+<li>  target : 현재 페이지에서 특정 위치로 연결할 수 있음
+<br> ->   <>안에 " a href = '#속성이름' 하고 연결할부분명 적어준 후에 <>닫아주면 된다.
+<br> ->   id값은 페이지에 단 한개 있어야 한다.
+<br> ->   #이 있는 곳의 글씨를 누르면 id값에 동일한 이름 지정해준 곳으로 위치를 이동한다.
+</li>
+<li>  text-decoration: none;    란, 링크에 있는 밑줄 없에준다.
+  <br>color: initial;       란, 클릭을 해도 색이 변하지 않도록 한다.
+  <br> -> color: interit;    란, 처음 색상으로 지정하는데, 색이 변하지 않도록 하는 것이다.
+  <br> cursor: pointer;    란 커서를 화살표 모양이 아닌 손가락 모양으로 지정하는 것이다.
+</li>
+<li> (경고)안내창 실행 : <>에 a target= '_blank' onclick='alert("메뉴 클릭")'>메뉴 입력
+<br> -> alert 바깥쪽과 ()안쪽의 따옴표 갯수가 틀려야 한다.
+</li>
+
+</ul>
+
+<h2><a
+     target='_self'
+     href='http://naver.com'>네이버 창</a></h2>
+<h2><a 
+     target='_blank'
+     href='http://localhost/test/html/video.html'>비디오 태그</a></h2>
+
+<h2>이미지 태그</h2>
+ src=' ../images/purple.jpg '
+<ul>
+<li> 현재 페이지가 있는 폴더가 아닌 폴더에 있는 이미지 파일을 찾아가는 경우
+" . " : 현재위치," .. ": 상위폴더로 나간 위치</li>
+<li> img 태그 : 이미지 태그로, 폴더 내의 이미지 표현과 웹상의 이미지 표현하며, 이미지태그는 여는 태그만 있다.
+<li>alt : 이미지파일이 정상로딩이 되지 않는 경우 이미지에 대한 설명을 넣는 속성</li>
+<li>title : 마우스를 가져다 대었을 때 보이는 설명을 말풍선으로 넣는 속성
+</li>
+</ul>
+
+
+<br>
+<img src=' ../images/purple.jpg ' 
+title = "2022 트랜드 색" alt = "2022 트랜드 색"> 
+<!-- source(src)-->
+
+<br>
+<hr><hr> 
+<h2>웹상 이미지 태그</h2> 
+<div> <> 안에 img scr = 이미지 주소복사  쓰면 된다.</div><br>
+<img  id='no1' src = 'https://search.pstatic.net/common/?src=http%3A%2F
+%2Fblogfiles.naver.net%2FMjAyMTA0MDdfMTcy%2FMDAxNjE3NzMxODA0N
+Tcx.Mw26spnSgIDU5W21hBtr88D0a7Ht6hmd-HAjO7OXsGMg.A7PgS6K7CRxC
+m50AbVmapRNxIaOgiEM4JDRQbeViFGwg.JPEG.designmaeg%2F20210406_1
+02738.jpg&type=sc960_832' width="500px" height="600px"
+alt = "개나리"><br>
+<div>(오른마우스 -> 이미지 주소복사 하면 된다.) </div>
+<hr>
+<a href = '#'> 맨 위로</a>
+<hr><br>
+</body>
+</html>

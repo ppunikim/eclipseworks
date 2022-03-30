@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+
+body{text-align: center; }
+table{ border-collapse:collapse; border:2px solid #222;}
+/* 	border-collapse: collapse; margin:0 auto; } */
+/* td{height:15px;} */
+th,td { border : 1px solid black; padding: 5px 10px;}
+a{color:interit; text-decoration:none;}
+h3{color: skyblue;}
+
+
+
+
+
+
+
