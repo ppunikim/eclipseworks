@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>slide 과제</title>
+
+<style>
+.box {
+	width:300px; height:200px;
+	border: 1px solid #ccc;  
+	float: left;
+	margin: 20px;
+	background-color:#82dbed;
+	box-sizing: border-box;	
+} 
+#sliding-wrap {
+	border: 1px solid #999;
+	width: 680px; height: 240px;
+	position: relative; 
+	overflow: hidden;
+} 
+.wrap { position:absolute;
+		width: 2040px;
+		height: 240px; 
+}
+ #zero .wrap { animation-name: cutting; 
+ 			  animation-duration: 16s; 
+			  animation-timing-function: steps(4,start); 
+			  animation-iteration-count: infinite;  
+			  animation-direction: alternate;  
+ } 
+@keyframes cutting { 
+	from{left: 0px} to {left:-1360px} 
+} 
+</style>
+</head>
+<body>
+<h2>k-디지털 드레이닝(K-Digital Training)</h2>
+<div id='zero'>
+	<div id= 'sliding-wrap'>
+		<div class='wrap'>
+			<div id='one' class='box'>
+				<h4>사물 인터넷</h4>
+				<p>센서,통신과 컴퓨팅 기능을 갖춘 것 </p>
+			</div>
+			<div id='two' class='box'>
+				<h4>빅데이터</h4>
+				<p>센서,통신과 컴퓨팅 기능을 갖춘 것 </p>
+			</div>
+			<div id='three' class='box'>
+				<h4>판테크</h4>
+				<p>센서,통신과 컴퓨팅 기능을 갖춘 것 </p>
+			</div>
+			<div id='four' class='box'>
+				<h4>스마트체조</h4>
+				<p>센서,통신과 컴퓨팅 기능을 갖춘 것 </p>
+			</div>
+			<div id='five' class='box'>
+				<h4>실감형 콘텐츠</h4>
+				<p>센서,통신과 컴퓨팅 기능을 갖춘 것 </p>
+			</div>
+			<div id='six' class='box'>
+				<h4>클라우딩 컴퓨터</h4>
+				<p>센서,통신과 컴퓨팅 기능을 갖춘 것 </p>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <title>마우스올렸을때 움직임</title>
 <style>
-.box{ width:100px; height:100px; margin: 50px;}
-.box1 { background-color: green;}
-.box2 { background-color: lime;}
-.box3 { background-color: skyblue;} 
+.box{ width:100px; height:100px; margin: 50px;} /* 영역 안에서 가운데 위치를 만들 네모박스*/
+.box1 { background-color: rgb(255, 128, 128);}/*마우스 가져다대면 30도 꺾임*/
+.box2 { background-color: rgb(0, 128, 192);} /* 눌렀을 때 300,100 이동*/
+.box3 { background-color: rgb(128, 128, 0);}  /*화면의 정 가운데 위치 */
 
 .box1:hover { 
 		transform: rotate(30deg);
@@ -33,7 +33,7 @@
 		background-color:orange;
 		position:absolute;
 		top:50%; left:50%;
-		transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%); /* 가운데 위치하도록 만드는 코드 */ 
 }
 
 

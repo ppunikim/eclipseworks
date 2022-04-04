@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+#transform .slide { 
+	transition-property: transform;
+	transition-duration: 10s;
+	transition-delay: 1s;
+/* 	transition-timing-function: linear;  */
+	transition-timing-function: easy;
+}
+#transform .slide:hover { 
+	transform: translateX(-1280px); 
+} 
+#transform2 .slide-wrap{ 
+	width:980px;
+}
+#transform2 .slide{
+	transition: transform 16s steps(3,start) 2s;
+}
+#transform2 .slide:hover {
+	transform: translateX(-960px);
+}
+
+
+</style>
+<link rel='stylesheet' href='slide.css'> 
+</head>
+<body>
+
+<div id='transform'>
+	<div class='slide-wrap'>
+		<div class= 'slide'>
+			<ul>
+				<li><img src='../images/cat3.jpg'></li>
+				<li><img src='../images/cat.jpg'></li>
+				<li><img src='../images/cat2.jpg'></li>
+				<li><img src='../images/rabbit.jpg'></li>
+				<li><img src='../images/flower.jpg'></li>
+				<li><img src='../images/coffee.jpg'></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+
+<div id='transform2'>
+	<div class='slide-wrap'>
+		<div class= 'slide'>
+			<ul>
+				<li><img src='../images/cat3.jpg'></li>
+				<li><img src='../images/cat.jpg'></li>
+				<li><img src='../images/cat2.jpg'></li>
+				<li><img src='../images/rabbit.jpg'></li>
+				<li><img src='../images/flower.jpg'></li>
+				<li><img src='../images/coffee.jpg'></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+
+</body>
+</html>
