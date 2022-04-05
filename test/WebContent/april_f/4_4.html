@@ -13,17 +13,17 @@
 	background-color:#82dbed;
 	box-sizing: border-box;	
 } 
-#sliding-wrap {
+#sliding-wrape {
 	border: 1px solid #999;
 	width: 680px; height: 240px;
 	position: relative; 
 	overflow: hidden;
 } 
-.wrap { position:absolute;
+.wrape { position:absolute;
 		width: 2040px;
 		height: 240px; 
 }
- #zero .wrap { animation-name: cutting; 
+ #zero .wrape { animation-name: cutting; 
  			  animation-duration: 16s; 
 			  animation-timing-function: steps(4,start); 
 			  animation-iteration-count: infinite;  
@@ -32,13 +32,64 @@
 @keyframes cutting { 
 	from{left: 0px} to {left:-1360px} 
 } 
+
+
+
+
+
+
+
+
+
+
+#k-digital{ width:1240px;
+			margin: 100px auto;
+			  }
+.slide-wrap { width: 1240px;
+			  height: 170px;
+			  position: relative; 
+			  overflow: hidden;
+			 }
+.slide ul { list-style: none;
+			margin: 0;
+			padding: 0;
+}	
+.slide ul li { float: left;
+			   box-sizing: border-box;
+			   background-color: #e6eeff;
+}
+.slide li:not(:last-child){ margin-right: 20px;
+}
+.slide { position: absolute;
+		 width: 2500px;
+		 height: 170px;
+}
+.training { width: 400px;
+			height: 170px;
+			border: 1px solid #ddd;
+}
+.training div { margin: 15px;
+}
+.training img { float: left; 
+}
+.training strong{ line-height: 48px;
+}
+.training p { font-size: 15px;
+}
+#k-digital .slide { 
+			animation: k-digital 9s steps(3,start), 3s infinite;
+			
+} 
+@keyframes k-digital {
+			from {left: 0px;} to { left: -1260px;}
+}
 </style>
 </head>
 <body>
 <h2>k-디지털 드레이닝(K-Digital Training)</h2>
 <div id='zero'>
-	<div id= 'sliding-wrap'>
-		<div class='wrap'>
+	<div id= 'sliding-wrape'>
+		<div class='wrape'>
 			<div id='one' class='box'>
 				<h4>사물 인터넷</h4>
 				<p>센서,통신과 컴퓨팅 기능을 갖춘 것 </p>
@@ -67,7 +118,58 @@
 	</div>
 </div>
 
+<hr>
 
+<div id = 'k-digital'>
+	<div class = 'slide-wrap'>
+		<div class = 'slide'>
+			<ul>
+				<li class = 'training'>
+					<div>
+						<img src = '../images/fish.png'>
+						<strong>물고기 1</strong>
+						<p> 11111111111111111111111111111111111 </p>
+					</div>
+				</li>
+				<li class = 'training'>
+					<div>
+						<img src = '../images/Flyingfish.png'>
+						<strong>물고기 2</strong>
+						<p> 2222222222222222222222222222222222 </p>
+					</div>
+				</li>
+				<li class = 'training'>
+					<div>
+						<img src = '../images/seafood.png'>
+						<strong>꽃게 3</strong>
+						<p> 3333333333333333333333333333333333333 </p>
+					</div>
+				</li>
+				<li class = 'training'>
+					<div>
+						<img src = '../images/whale.png'>
+						<strong>돌고래 4</strong>
+						<p> 4444444444444444444444444444444444444 </p>
+					</div>
+				</li>
+				<li class = 'training'>
+					<div>
+						<img src = '../images/deep.png'>
+						<strong>아귀 5</strong>
+						<p> 5555555555555555555555555555555555555555 </p>
+					</div>
+				</li>
+				<li class = 'training'>
+					<div>
+						<img src = '../images/Clownfish.png'>
+						<strong>니모 6</strong>
+						<p> 666666666666666666666666666666666666 </p>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
 
 
 
