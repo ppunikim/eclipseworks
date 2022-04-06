@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name='viewport' 
+	  content='width=device-width, initial-scale=1'>
+
+<title>flex</title>
+
+<style>
+body {
+		margin: 0 auto;
+}
+ul {
+		list-style: none;
+		padding: 0; 
+}
+header {
+		padding: 0 100px;
+		font-size: 18px;
+		font-weight: bold;
+		width: calc(100% - 200px);
+		display: flex;
+		justify-content: flex-start;
+		border-bottom: 1px solid #ccc;
+}
+header nav {
+		width: 65%;
+}
+header #user {
+		width: 35%;
+		font-size: 16px;
+}
+header ul, section ul {
+		width: 100%;
+ 		display: flex; 
+ 		flex-wrap: wrap; 
+		
+}
+header nav ul {
+		justify-content: flex-start;
+}
+header #user ul {
+		justify-content: flex-end;
+}
+#user input[type=button] {
+		margin-left: 10px;
+}
+#ham { 
+		display:none;
+}
+#ham #ham_open {
+		position: fixed;
+		left: -999999999999px;
+		
+}
+#ham_open + label img { 
+		width: 25px;
+		height: 25px;
+}
+#ham_menu ul {
+		flex-direction: column; 
+		justify-content: center;
+		
+}
+#ham_menu li {
+		padding: 10px 0 10px;
+		border-bottom: 1px solid #555;
+}
+#ham_menu {
+		position: absolute; 
+		left: 0px;
+		width: 100%;
+		background-color: #fff;
+		transform-origin: top;
+		transform: scaleY(0);
+		transition: 0.3s;
+		opacity:0.7;
+		color: black;
+		
+}
+#ham_open:checked ~ #ham_menu {
+		transform: scaleY(1);
+		
+}
+
+
+section {
+		padding: 0 100px; 
+		width: calc(100% - 200px)
+}
+article {
+		padding: 50px 0;
+		width: 100%;
+}
+article img {
+		width: 300px;
+		height: 200px;
+}
+section ul {
+		justify-content: center;
+}
+
+
+
+footer {
+		padding: 20px 100px;
+		border-top: 1px solid #aaa;
+		font-size: 14px;
+		display: flex;
+		flex-wrap:wrap;
+}
+footer div {
+		display:flex;
+		flex-direction: column;
+}
+address {
+		font:inherit;
+}
+footer div * {
+		margin: 5px 0;
+}
+footer span {
+		margin-right: 20px;
+}
+
+
+
+@media screen and (max-width:1023px){
+		header,footer,section {
+			padding:0 40px;
+			width:calc(100% - 80px);
+		}
+		
+}
+@media screen and (max-width:711px){
+		header,footer,section {
+			padding: 0 30px;
+			width:calc(100% - 60px)
+		}
+		header nav {
+			width: 65%;
+		}	
+		header #user {
+			width: 35%;
+		}
+		#ham {
+			display:block;
+		}
+		#ham ~ li {
+			display:none;
+		}
+}
+@media screen and (max-width:414px){
+		header,footer,section {
+			padding: 0 20px;
+			width:calc(100% - 40px)
+		} 
+		footer span {
+			display:none;
+		}
+		footer div { margin: 5px 0;}
+}
+
+
+
+
+
+
+</style>
+</head>
+<body>
+
+<header> 
+	<nav>
+		<ul>
+			<li id= 'ham'>
+					<input type='checkbox' id='ham_open'>
+					<label for='ham_open'>
+						<img src='../images/hamburger.png'>
+					</label>
+					<div id='ham_menu'>
+						<ul>
+						<li>메인메뉴1</li>
+						<li>메인메뉴2</li>
+						<li>메인메뉴3</li>
+						<li>메인메뉴4</li>
+						<li>메인메뉴5</li>
+						</ul>
+					</div>
+			</li>
+				<li>메인메뉴1</li>
+				<li>메인메뉴2</li>
+				<li>메인메뉴3</li>
+				<li>메인메뉴4</li>
+				<li>메인메뉴5</li>
+		</ul>
+	</nav>
+	<div id= 'user'>
+		<ul>
+			<li>김뿌니님</li>
+			<li><input type='button' value='로그아웃'></li>
+		</ul>		
+	</div>
+</header>
+<section>
+	<article>
+		<ul>
+			<li><img src='../images/cat.jpg'></li>
+			<li><img src='../images/cat2.jpg'></li>
+			<li><img src='../images/cat3.jpg'></li>
+			<li><img src='../images/coffee.jpg'></li>
+			<li><img src='../images/cake.jpg'></li>
+			<li><img src='../images/rabbit.jpg'></li>
+		</ul>
+	</article>
+</section>
+<footer>
+	<span>
+	<img src='../images/logo.png'>
+	</span>
+	<div>
+		<address>중흥동 한국경영원 5층 505호</address>
+		<p>All rights reserved.</p>
+	</div>
+</footer>
+
+
+</body>
+</html>
